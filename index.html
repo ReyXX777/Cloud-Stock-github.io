@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cloud Stocks Platform</title>
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <h1>Cloud Stocks Platform</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#marketplace">Marketplace</a></li>
+                    <li><a href="#support">Support</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main id="home">
+        <!-- Hero Section with background image -->
+        <section class="hero" style="background-image: url('images/hero-background.jpeg');">
+            <h2>Welcome to the Cloud Stocks Platform</h2>
+            <p>Turn your data into investments with AI, Blockchain, and Cloud Stocks. Share your cookies, earn loyalty points, and benefit from website success!</p>
+            <button onclick="getStarted()">Get Started</button>
+        </section>
+
+        <!-- Features Section with feature images/icons -->
+        <section id="features">
+            <h3>Our Key Features</h3>
+
+            <!-- Dynamic Pricing Feature -->
+            <div class="feature">
+                <img src="images/dynamic-pricing.jpeg" alt="Dynamic Pricing" class="feature-img">
+                <h4>Dynamic Pricing of Cloud Stocks</h4>
+                <p>The value of Cloud Stocks adjusts in real-time based on market factors like traffic and user engagement.</p>
+                <button onclick="showDynamicPricing()">View Current Cloud Stock Prices</button>
+                <p id="dynamic-pricing-result"></p>
+            </div>
+
+            <!-- AI-Powered Recommendations -->
+            <div class="feature">
+                <img src="images/ai-recommendations.jpg" alt="AI Recommendations" class="feature-img">
+                <h4>AI-Powered Recommendations and Monitoring</h4>
+                <p>AI analyzes user behavior and recommends personalized content to improve engagement.</p>
+                <button onclick="getRecommendations()">Get AI-Powered Recommendations</button>
+                <p id="ai-recommendations-result"></p>
+            </div>
+
+            <!-- Blockchain Security -->
+            <div class="feature">
+                <img src="images/blockchain-security.jpeg" alt="Blockchain Security" class="feature-img">
+                <h4>Blockchain for Security and Transparency</h4>
+                <p>Blockchain ensures that all transactions, including cookie exchanges, are securely recorded and transparent.</p>
+                <button onclick="viewBlockchain()">View Blockchain Transactions</button>
+                <p id="blockchain-result"></p>
+            </div>
+
+            <!-- Cloud Stocks and Loyalty Points -->
+            <div class="feature">
+                <img src="images/loyalty-points.png" alt="Loyalty Points" class="feature-img">
+                <h4>Cloud Stocks and Loyalty Points</h4>
+                <p>Share cookies to earn loyalty points, which act as investments in website performance and success.</p>
+                <button onclick="shareCookies()">Share Cookies for Loyalty Points</button>
+                <p id="cookie-share-result"></p>
+            </div>
+
+            <!-- Real-Time Privacy Value -->
+            <div class="feature">
+                <img src="images/privacy.jpeg" alt="Privacy Value" class="feature-img">
+                <h4>Real-Time Privacy Value</h4>
+                <p>Get real-time data on the value of your privacy based on the cookies you've shared and website performance.</p>
+                <button onclick="viewPrivacyValue()">View Real-Time Privacy Value</button>
+                <p id="privacy-value-result"></p>
+            </div>
+
+            <!-- Customizable Landing Pages -->
+            <div class="feature">
+                <img src="images/customaziable-images.jpeg" alt="Customizable Pages" class="feature-img">
+                <h4>Customizable Landing Pages</h4>
+                <p>Use your Cloud Stocks to purchase and customize landing pages, promoting your presence on the platform.</p>
+                <button onclick="createLandingPage()">Create Your Landing Page</button>
+                <p id="landing-page-result"></p>
+            </div>
+        </section>
+
+        <!-- Marketplace Section -->
+        <section id="marketplace">
+            <h3>Redeem Your Loyalty Points</h3>
+            <p>Redeem your loyalty points in our marketplace for premium features, products, and services.</p>
+            <div class="marketplace-items">
+                <div class="item">
+                    <img src="images/premium-features.jpeg" alt="Premium Features" class="marketplace-img">
+                    <h4>Premium Features</h4>
+                    <button onclick="redeem('Premium Features')">Redeem</button>
+                    <p id="premium-result"></p>
+                </div>
+                <div class="item">
+                    <img src="images/products.jpeg" alt="Products" class="marketplace-img">
+                    <h4>Products</h4>
+                    <button onclick="redeem('Products')">Redeem</button>
+                    <p id="products-result"></p>
+                </div>
+                <div class="item">
+                    <img src="images/website-services.jpeg" alt="Services" class="marketplace-img">
+                    <h4>Services</h4>
+                    <button onclick="redeem('Services')">Redeem</button>
+                    <p id="services-result"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support Section with icons -->
+        <section id="support">
+            <h3>User Education and Support</h3>
+            <div class="support-item">
+                <img src="images/tutorials.jpeg" alt="Interactive Tutorials" class="support-img">
+                <h4>Interactive Tutorials</h4>
+                <p>Learn how to use Cloud Stocks through interactive step-by-step guides and video tutorials.</p>
+                <button onclick="startTutorial()">Start Tutorial</button>
+                <p id="tutorial-result"></p>
+            </div>
+
+            <div class="support-item">
+                <img src="images/knowledge.jpeg" alt="Knowledge Hub" class="support-img">
+                <h4>Knowledge Hub</h4>
+                <p>Explore the knowledge hub for in-depth resources on cookies, blockchain, and Cloud Stocks.</p>
+                <button onclick="openKnowledgeHub()">Open Knowledge Hub</button>
+                <p id="knowledge-hub-result"></p>
+            </div>
+
+            <div class="support-item">
+                <img src="images/customer-support.jpeg" alt="Customer Support" class="support-img">
+                <h4>Customer Support</h4>
+                <p>Access 24/7 live chat and email support for help with any questions or concerns.</p>
+                <button onclick="contactSupport()">Contact Support</button>
+                <p id="support-result"></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section with social media icons -->
+    <footer>
+        <div class="footer-info">
+            <div class="social-media">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="https://facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook"></a></li>
+                    <li><a href="https://instagram.com" target="_blank"><img src="images/instagram.webp" alt="Instagram"></a></li>
+                    <li><a href="https://twitter.com" target="_blank"><img src="images/twitter.jpeg" alt="Twitter"></a></li>
+                </ul>
+            </div>
+            <div class="contact-info">
+                <h4>Contact Us</h4>
+                <p>Email: support@cloudstocks.com</p>
+                <p>Phone: +123-456-7890</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link to external JS -->
+    <script src="index.js"></script>
+</body>
+
+</html>
